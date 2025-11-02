@@ -1,11 +1,10 @@
-import Navbar from "../components/Navbar.jsx";
+import Layout from "../components/Layout";
 import heroVideo from "../assets/videos/bgedit.mp4";
 import sampleImage from "../assets/images/sample3.jpg";
 
 const Home = () => {
       return (
-            <>
-                  <Navbar />
+            <Layout>
                   <main>
                         <section className="section hero">
                               <video
@@ -43,17 +42,7 @@ const Home = () => {
                                                       just preparing and serving
                                                       meals- it's about creating
                                                       memorable experiences for
-                                                      every customer. It
-                                                      continues quality
-                                                      ingredients, skilled
-                                                      preparation, and a
-                                                      welcoming atmosphere to
-                                                      ensure that many dish
-                                                      things satisfaction and
-                                                      joy. A great food service
-                                                      focuses on freshness,
-                                                      flavor, and presentation
-                                                      to delight the senses.
+                                                      every customer...
                                                 </p>
                                                 <button className="why-button">
                                                       hello
@@ -77,22 +66,13 @@ const Home = () => {
                                                 Food service is more than just
                                                 preparing and serving meals-
                                                 it's about creating memorable
-                                                experiences for every customer.
-                                                It continues quality
-                                                ingredients, skilled
-                                                preparation, and a welcoming
-                                                atmosphere to ensure that many
-                                                dish things satisfaction and
-                                                joy. A great food service
-                                                focuses on freshness, flavor,
-                                                and presentation to delight the
-                                                senses.
+                                                experiences...
                                           </p>
                                     </div>
                               </div>
                         </section>
                   </main>
-            </>
+            </Layout>
       );
 };
 
