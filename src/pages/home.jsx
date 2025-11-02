@@ -1,0 +1,99 @@
+import Navbar from "../components/Navbar.jsx";
+import heroVideo from "../assets/videos/bgedit.mp4";
+import sampleImage from "../assets/images/sample3.jpg";
+
+const Home = () => {
+      return (
+            <>
+                  <Navbar />
+                  <main>
+                        <section className="section hero">
+                              <video
+                                    autoPlay
+                                    muted
+                                    loop
+                                    playsInline
+                                    className="hero-video"
+                                    aria-hidden="true"
+                              >
+                                    <source src={heroVideo} type="video/mp4" />
+                                    Your browser does not support the video tag.
+                              </video>
+
+                              <div className="content">
+                                    <h1>Savor the classic filipino dishes!</h1>
+                                    <p>
+                                          Lorem ipsum dolor sit amet consectetur
+                                          adipisicing elit. Sapiente impedit in
+                                          dolore officia veritatis cumque iusto.
+                                    </p>
+                                    <a className="cta-button" href="/menu">
+                                          View Menu
+                                    </a>
+                              </div>
+                        </section>
+
+                        <section className="section why-section">
+                              <div className="why-container">
+                                    <div className="why-content-wrapper">
+                                          <div className="why-text">
+                                                <h2>Why Kusina ni Kapetan?</h2>
+                                                <p className="why-description">
+                                                      Food service is more than
+                                                      just preparing and serving
+                                                      meals- it's about creating
+                                                      memorable experiences for
+                                                      every customer. It
+                                                      continues quality
+                                                      ingredients, skilled
+                                                      preparation, and a
+                                                      welcoming atmosphere to
+                                                      ensure that many dish
+                                                      things satisfaction and
+                                                      joy. A great food service
+                                                      focuses on freshness,
+                                                      flavor, and presentation
+                                                      to delight the senses.
+                                                </p>
+                                                <button className="why-button">
+                                                      hello
+                                                </button>
+                                          </div>
+                                          <div className="why-image">
+                                                <img
+                                                      src={sampleImage}
+                                                      alt="Kusina ni Kapetan Food"
+                                                />
+                                          </div>
+                                    </div>
+                              </div>
+                        </section>
+
+                        <section className="section best-seller">
+                              <div className="best-seller-container">
+                                    <div className="best-seller-content">
+                                          <h2>Why Kusina ni Kapetan?</h2>
+                                          <p className="why-description">
+                                                Food service is more than just
+                                                preparing and serving meals-
+                                                it's about creating memorable
+                                                experiences for every customer.
+                                                It continues quality
+                                                ingredients, skilled
+                                                preparation, and a welcoming
+                                                atmosphere to ensure that many
+                                                dish things satisfaction and
+                                                joy. A great food service
+                                                focuses on freshness, flavor,
+                                                and presentation to delight the
+                                                senses.
+                                          </p>
+                                    </div>
+                              </div>
+                        </section>
+                  </main>
+            </>
+      );
+};
+
+export default Home;
