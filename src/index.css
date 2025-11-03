@@ -120,24 +120,54 @@ a {
       --navbar-height: 90px;
 }
 
-/* Discount Announcement Bar */
-.discount-bar {
+/* Announcement Bar */
+.announcement-bar {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: var(--topbar-height);
       background: var(--orange);
-      background-size: 200% 100%;
       color: var(--rice-white);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 0.9rem;
+      padding: 0 20px;
       z-index: 100;
+      transition: transform 0.3s ease-in-out;
+      font-size: 0.9rem;
       letter-spacing: 0.2px;
       font-family: "Balto", sans-serif;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.announcement-content {
+      flex-grow: 1;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+}
+
+.announcement-close {
+      background: none;
+      border: none;
+      color: var(--rice-white);
+      cursor: pointer;
+      font-size: 1.2rem;
+      padding: 0 10px;
+      position: absolute;
+      right: 15px;
+      opacity: 0.8;
+}
+
+.announcement-close:hover {
+      opacity: 1;
+}
+
+.navbar.announcement-hidden {
+      top: 0;
 }
 
 @keyframes shimmer {
@@ -147,27 +177,6 @@ a {
       100% {
             background-position: 200% 0;
       }
-}
-
-.discount-content {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-}
-
-.discount-close {
-      position: absolute;
-      right: 15px;
-      background: none;
-      border: none;
-      color: var(--rice-white);
-      cursor: pointer;
-      font-size: 0.9rem;
-      opacity: 0.8;
-}
-
-.discount-close:hover {
-      opacity: 1;
 }
 
 /* navbar styles */
@@ -182,7 +191,7 @@ a {
       display: flex;
       align-items: center;
       border-bottom: 2px solid var(--watch-house-color);
-      transition: all 0.3s ease;
+      transition: all 0.3s ease-in-out;
 }
 
 .navbar::before {
@@ -208,7 +217,7 @@ a {
       padding: 6rem;
 }
 
-/* logo styling */
+/* logo styles */
 .nav-logo {
       position: absolute;
       left: 50%;
@@ -334,7 +343,7 @@ a {
       }
 }
 
-/* Section Styles */
+/* section styles */
 .section {
       padding: 4rem 1.5rem;
       width: 100%;

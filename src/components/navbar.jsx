@@ -1,9 +1,16 @@
 import { Link } from "react-router-dom";
-/* Announcement Bar */ 
-const Navbar = () => {
+
+const Navbar = ({ isAnnouncementVisible }) => {
       return (
             <header>
-                  <nav id="navbar" className="navbar">
+                  <nav
+                        id="navbar"
+                        className={`navbar ${
+                              !isAnnouncementVisible
+                                    ? "announcement-hidden"
+                                    : ""
+                        }`}
+                  >
                         <div className="nav-container">
                               <div className="nav-left">
                                     <Link to="/">Home.</Link>
