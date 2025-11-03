@@ -1,19 +1,22 @@
-const AnnouncementBar = ({ isVisible, onClose }) => {
-      if (!isVisible) return null;
+import React from "react";
+import "../index.css";
 
+const AnnouncementBar = ({ isVisible, onClose }) => {
       return (
-            <div className="announcement-bar" role="status">
+            <div
+                  className={`announcement-bar ${
+                        isVisible ? "visible" : "hidden"
+                  }`}
+            >
                   <div className="announcement-content">
-                        <span>
-                              Limited Time Offer: Get 20% Off Your First Order!
-                        </span>
+                        🎉 Limited Time Offer: Get 20% Off Your First Order!
                   </div>
                   <button
                         className="announcement-close"
-                        aria-label="Close offer"
                         onClick={onClose}
+                        aria-label="Close announcement"
                   >
-                        ✕
+                        &times;
                   </button>
             </div>
       );

@@ -1,0 +1,246 @@
+body {
+      margin: 0px;
+      padding: 0px;
+}
+
+.landing {
+      height: 100vh;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      position: relative;
+}
+
+.landing .banner {
+      height: 100vh;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(
+            135deg,
+            var(--green) 0%,
+            var(--forest-green) 100%
+      );
+      position: relative;
+      display: flex;
+      align-items: center;
+      color: var(--rice-white);
+      overflow: hidden;
+}
+
+.landing .slides {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: 0;
+}
+
+.landing .slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transform: scale(1);
+      transition: opacity 1s ease, transform 30s linear;
+}
+
+.landing .slide.active {
+      opacity: 1;
+      transform: scale(1.08);
+}
+
+.landing .banner::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+            90deg,
+            rgba(70, 148, 107, 0.8) 0%,
+            rgba(70, 148, 107, 0.4) 40%,
+            rgba(70, 148, 107, 0.2) 70%
+      );
+      pointer-events: none;
+      z-index: 1;
+}
+
+.landing .container {
+      position: relative;
+      max-width: 1200px;
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      z-index: 2;
+      padding: 0 48px;
+}
+
+.landing .left {
+      max-width: 620px;
+      padding: 0;
+      z-index: 3;
+}
+
+.landing h1 {
+      font-family: "Tiempos", serif;
+      font-size: 64px;
+      line-height: 0.94;
+      margin: 0 0 18px 0;
+      color: var(--rice-white);
+      letter-spacing: -1px;
+      text-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+.landing p.lead {
+      margin: 0 0 28px 0;
+      color: rgba(255, 255, 255, 0.95);
+      max-width: 520px;
+      font-size: 18px;
+      line-height: 1.6;
+      font-weight: 400;
+}
+
+.landing .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--orange);
+      color: var(--rice-white);
+      padding: 14px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 16px;
+      transition: all 0.3s ease;
+}
+
+.landing .cta:hover {
+      background: var(--vivid-red);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+.landing .overlay-controls {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 4;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 28px;
+      pointer-events: none;
+}
+
+.landing .overlay-controls button {
+      pointer-events: auto;
+      background: var(--orange);
+      border: none;
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      display: inline-grid;
+      place-items: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.landing .overlay-controls button:hover {
+      background: var(--vivid-red);
+}
+
+.landing .overlay-controls i {
+      font-size: 18px;
+      color: var(--rice-white);
+}
+
+.landing .slide-indicators {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 8px;
+      z-index: 5;
+}
+
+.landing .indicator {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(255, 255, 255, 0.5);
+      cursor: pointer;
+      transition: all 0.3s ease;
+}
+
+.landing .indicator.active {
+      background: var(--orange);
+      transform: scale(1.2);
+}
+
+.landing .indicator:hover {
+      background: var(--vivid-red);
+}
+
+.landing .loading {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: var(--green);
+      color: var(--rice-white);
+}
+
+.landing .loading p {
+      font-family: "Balto", sans-serif;
+}
+
+@media (max-width: 900px) {
+      .landing h1 {
+            font-size: 48px;
+      }
+
+      .landing .container {
+            padding: 0 28px;
+      }
+}
+
+@media (max-width: 640px) {
+      .landing h1 {
+            font-size: 36px;
+      }
+
+      .landing .container {
+            padding: 0 20px;
+      }
+
+      .landing .left {
+            max-width: 100%;
+      }
+
+      .landing .overlay-controls {
+            padding: 0 16px;
+      }
+
+      .landing p.lead {
+            font-size: 16px;
+      }
+}
